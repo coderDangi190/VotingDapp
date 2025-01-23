@@ -1,6 +1,7 @@
 import { useWeb3Context } from "../../context/useWeb3Context";
 export const EmergencyDeclare = ()=>{
-    const {contractInstance} = useWeb3Context();
+    const {web3State} = useWeb3Context()
+    const {contractInstance} = web3State;
 
     const emergencyStop = async()=>{
         const Result = await contractInstance.emergencyStopVoting();

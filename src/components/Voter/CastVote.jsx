@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { useWeb3Context } from "../../context/useWeb3Context";
 
 const CastVote = ()=>{
+    const {web3State} = useWeb3Context()
+    const {contractInstance} = web3State;
     const vRef = useRef(null);
     const cRef = useRef(null);
 
